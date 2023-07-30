@@ -22,6 +22,7 @@ code {
   height: 100vh;
   width: 100vw;
   padding: 20px;
+  background: #eae7e7;
 }
 .top-container {
   /* background-image: url("https://images.unsplash.com/photo-1579445505461-acecf2596190?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2xhc3MlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60");
@@ -34,7 +35,8 @@ code {
   object-fit: cover;
   height: 180px;
   width: 100%;
-  border-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .social-media {
   position: absolute;
@@ -47,12 +49,25 @@ code {
 .social-media-icons {
   width: 50px;
   height: 50px;
+  background-color: rgb(117, 117, 117);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media all and (max-width: 786px) {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 }
 .org-icon {
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   position: absolute;
   left: 20px;
   bottom: -40px;
@@ -62,6 +77,9 @@ code {
 }
 .job-header-container {
   padding: 30px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: white;
   @media all and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -99,19 +117,22 @@ code {
   color: gray;
 }
 .bottom-container {
-  padding: 10px;
-  background-color: white;
+  background: #eae7e7;
   @media all and (max-width: 768px) {
     display: flex;
     flex-direction: column;
   }
 }
 .job-overview-container {
+  background: white;
+  border-radius: 12px;
   @media all and (max-width: 768px) {
     width: 100%;
   }
 }
 .job-requirements-container {
+  background: white;
+  border-radius: 12px;
   @media all and (max-width: 768px) {
     width: 100%;
   }
@@ -130,14 +151,17 @@ ul {
   padding: 8px 8px 0px 8px;
 }
 .job-details-card-footer {
-  padding: 12px 8px;
+  padding: 22px;
 }
 .role {
   max-width: 120px;
   min-width: 120px;
 }
 .recommended-jobs-wrapper {
-  padding: 2.5rem 2.5rem 0.75rem 10rem;
+  padding: 2.5rem 2.5rem 0.75rem 18rem;
+  @media all and (min-width: 769px) and (max-width: 1100px) {
+    padding: 2.5rem 2.5rem 0.75rem 2.5rem !important;
+  }
   @media all and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -204,4 +228,24 @@ ul {
     align-items: center !important;
     justify-content: space-between !important;
   }
+}
+.wishlist-button {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.job-details-card-header {
+  max-height: 250px;
+  min-height: 250px;
+}
+.button-without-icon-container {
+  height: fit-content;
+  width: fit-content;
+  background: white;
+  padding: 10px;
+  border: 1px solid rgb(186, 186, 186);
 }

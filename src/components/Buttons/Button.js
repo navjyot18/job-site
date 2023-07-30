@@ -2,7 +2,7 @@ export function ButtonWithIcon({ icon, buttonName, background }) {
   return (
     <div
       className={
-        "flex flex-row gap-x-1 rounded-full p-3 items-center justify-center"
+        "flex flex-row gap-x-1 rounded-full py-2 px-5 items-center justify-center"
       }
       style={{ background: background }}
     >
@@ -22,7 +22,7 @@ export function ButtonWithIcon({ icon, buttonName, background }) {
 
 export function ButtonWithoutIcon({ icon }) {
   return (
-    <div className="rounded-full border-slate-500">
+    <div className="button-without-icon-container rounded-full border-slate-500">
       <img
         className="object-cover rounded-full border-slate-500"
         src={icon}

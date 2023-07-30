@@ -8,7 +8,7 @@ import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 function Profile() {
   const isMobile = useWindowSize();
   return (
-    <div className="profile-section bg-black pl-40 pt-10 pr-10 pb-10 border-b border-zinc-500 flex flex-row items-center justify-between">
+    <div className="profile-section bg-black pl-40 pt-7 pr-7 pb-7 border-b border-zinc-500 flex flex-row items-center justify-between">
       {!isMobile && (
         <div className="flex flex-row gap-x-6">
           <div className="text-white text-sm">Find job</div>

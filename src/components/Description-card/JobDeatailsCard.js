@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function JobDetailsCard({ job, jobSelectHandler }) {
@@ -34,16 +35,16 @@ function JobDetailsCard({ job, jobSelectHandler }) {
     return `${day} ${month}, ${year}`;
   }
   return (
-    <div className="job-details-card border border-zinc-300 rounded-md">
+    <div className="job-details-card border border-zinc-300 rounded-2xl">
       <div
         style={{ backgroundColor: randomColor }}
-        className="job-details-card-header p-4 flex flex-col gap-y-3 rounded-md"
+        className="job-details-card-header p-4 flex flex-col gap-y-4 rounded-2xl"
       >
         <div className="job-posted-timing flex flex-row items-center justify-between">
           <div className="bg-white p-2 rounded-full">
             {formatDate(job.created_date)}
           </div>
-          <div>
+          <div className="wishlist-button">
             <img
               width={30}
               height={30}
@@ -72,7 +73,7 @@ function JobDetailsCard({ job, jobSelectHandler }) {
             />
           </div>
         </div>
-        <div className="skills flex flex-wrap gap-2">
+        <div className="skills flex flex-wrap gap-2 mt-auto">
           {job.tags.map((skill) => (
             <div className="border border-zinc-400 rounded-full p-2">
               {skill}
@@ -85,13 +86,16 @@ function JobDetailsCard({ job, jobSelectHandler }) {
           <div className="salary-details font-semibold">
             ${job.hourly_rate}/hr
           </div>
-          <div className="location-details">{job.location}</div>
+          <div className="text-slate-400 location-details">{job.location}</div>
         </div>
         <Link
-          onClick={() => jobSelectHandler(job)}
+          onClick={() => {
+            jobSelectHandler(job);
+            sessionStorage.setItem("job", job);
+          }}
           to={{ pathname: "/job-details", state: { name: "job" } }}
         >
-          <div className="details-btn rounded-full bg-black px-3 py-2 text-white font-semibold">
+          <div className="details-btn rounded-full bg-black px-3 py-2 text-white font-normal">
             Details
           </div>
         </Link>

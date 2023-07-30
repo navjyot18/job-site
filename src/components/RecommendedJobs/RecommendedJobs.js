@@ -25,7 +25,7 @@ function RecommendedJobs({ data, jobSelectHandler }) {
         </div>
         <div className="recommended-jobs-main"></div>
       </div>
-      <div className="all-recommended-jobs grid grid-cols-3 gap-4">
+      <div className="all-recommended-jobs grid grid-cols-3 gap-5">
         {data.map((job) => (
           <JobDetailsCard job={job} jobSelectHandler={jobSelectHandler} />
         ))}

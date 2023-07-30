@@ -1,10 +1,14 @@
+import { useEffect } from "react";
 import { ButtonWithoutIcon, ButtonWithIcon } from "../Buttons/Button";
 import { DescriptionCard } from "../Description-card/DescriptionCard";
+import GoogleIcon from "@mui/icons-material/Google";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 function JobDetails(props) {
   const socialMediaLink = [
-    "https://icons-for-free.com/iconfiles/png/512/g+google+google+2015+new+google+icon-1320190551260288871.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFw1zTwOYJ1dTUJdHW4Ie1c4eFcUPj9OIGZw&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGuPVO8GO4Mk1C3H6lQuHst2io8pp3Y7RSyg&usqp=CAU",
+    <GoogleIcon style={{ color: "white" }} />,
+    <TwitterIcon style={{ color: "white" }} />,
+    <InstagramIcon style={{ color: "white" }} />,
   ];
 
   const descArray = [
@@ -18,10 +22,9 @@ function JobDetails(props) {
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
   ];
-
   return (
     <div className="jobdetails-container">
-      <div className="flex flex-col">
+      <div className="flex flex-col my-4">
         <div className="top-container">
           <img
             className="header-bg"
@@ -32,13 +35,14 @@ function JobDetails(props) {
             <div className="flex flex-row gap-x-1">
               {socialMediaLink.map((icon) => (
                 <div className="social-media-icons">
-                  <img
+                  {icon}
+                  {/* <img
                     width={"100%"}
                     height={"100%"}
                     className="rounded-full"
                     src={icon}
                     alt="icon"
-                  />
+                  /> */}
                 </div>
               ))}
             </div>
@@ -77,20 +81,20 @@ function JobDetails(props) {
               <ButtonWithIcon
                 icon={"https://cdn-icons-png.flaticon.com/512/1077/1077035.png"}
                 buttonName="Save"
-                background="grey"
+                background="#f1f5f9"
               />
               <ButtonWithIcon
                 icon={
                   "https://www.shutterstock.com/image-vector/ladies-bag-symbol-icon-vector-600w-1440520124.jpg"
                 }
                 buttonName="Apply"
-                background="skyblue"
+                background="#5aabeb"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="bottom-container flex flex-row gap-2">
+      <div className="bottom-container flex flex-row gap-4">
         <div className="job-overview-container border-solid border border-slate-300 p-5 rounded flex flex-col gap-y-3 w-4/6">
           <div className="job-overview flex flex-col gap-y-1">
             <div className="font-bold text-base">Job Overview:</div>
