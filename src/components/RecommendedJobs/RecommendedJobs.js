@@ -2,7 +2,7 @@ import JobDetailsCard from "../Description-card/JobDeatailsCard";
 
 function RecommendedJobs({ data, jobSelectHandler }) {
   return (
-    <div className="recommended-jobs-wrapper pl-40 pt-10 pr-10 pb-3">
+    <div className="recommended-jobs-wrapper">
       <div className="recommended-jobs">
         <div className="recommended-jobs-header flex flex-row items-center justify-between">
           <div className="recommended-jobs-header-title flex flex-row gap-x-3">

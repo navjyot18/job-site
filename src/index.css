@@ -137,6 +137,7 @@ ul {
   min-width: 120px;
 }
 .recommended-jobs-wrapper {
+  padding: 2.5rem 2.5rem 0.75rem 10rem;
   @media all and (max-width: 768px) {
     display: flex;
     flex-direction: column;
