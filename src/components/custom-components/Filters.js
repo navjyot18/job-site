@@ -14,7 +14,7 @@ function Filters() {
   return (
     <>
       {isMobile && (
-        <div className="flex flex-row p-4 items-center justify-between bg-black">
+        <div className="mobile-filter section flex flex-row p-4 items-center justify-between bg-black">
           <div className="text-white	">Filters</div>
           <ArrowDropDownSharpIcon
             style={{ color: "white" }}
@@ -23,7 +23,7 @@ function Filters() {
         </div>
       )}
       {showFilters && (
-        <div className="filter-section h-1/5 border-t-1 border-zinc-400 bg-black p-10 grid grid-cols-5">
+        <div className="filter-section h-1/5 border-t-1 border-zinc-400 bg-black grid grid-cols-5">
           <div className="each-filter border-r border-zinc-500 pl-4 py-1 pr-1 flex flex-row flex-1 items-center justify-between">
             <div className="flex flex-row items-center gap-x-2">
               <div className="circular-border">

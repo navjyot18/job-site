@@ -140,7 +140,7 @@ ul {
   @media all and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px !important;
   }
 }
 .all-recommended-jobs {
@@ -155,18 +155,22 @@ ul {
   border-radius: 50%;
 }
 .profile-section {
+  @media all and (min-width: 769px) and (max-width: 880px) {
+    padding-left: 8rem !important;
+  }
   @media all and (max-width: 768px) {
-    padding: 10px;
+    padding: 10px !important;
   }
 }
 .filter-section {
+  padding: 2.5rem !important;
   @media all and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    height: auto !important;
   }
 }
 .each-filter {
@@ -186,5 +190,13 @@ ul {
     display: flex !important;
     flex-direction: column !important;
     gap: 14px !important;
+  }
+}
+.mobile-filter section {
+  @media all and (max-width: 768px) {
+    padding: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
 }

@@ -19,7 +19,7 @@ function Profile() {
         </div>
       )}
       {!isMobile ? (
-        <div className="flex flex-row gap-x-12">
+        <div className="flex flex-row gap-x-12 items-center">
           <div className="text-white text-sm flex flex-row">
             <div>
               <LocationOnSharpIcon style={{ color: "white" }} />

@@ -54,7 +54,7 @@ function JobDetails(props) {
         </div>
         <div className="job-header-container flex flex-row justify-between">
           <div className="job-headers flex flex-col gap-y-2">
-            <div className="job-title">Senior UI Designer</div>
+            <div className="job-title">{props.selectedJob.title}</div>
             <div className="job-office-name">
               {props.selectedJob.company.name}
             </div>
