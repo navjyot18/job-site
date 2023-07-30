@@ -4,11 +4,9 @@ function RecommendedJobs({ data, jobSelectHandler }) {
   return (
     <div className="recommended-jobs-wrapper">
       <div className="recommended-jobs">
-        <div className="recommended-jobs-header flex flex-row items-center justify-between">
+        <div className="recommended-jobs-header">
           <div className="recommended-jobs-header-title flex flex-row gap-x-3">
-            <div className="text-2xl font-bold recommend-jobs-title">
-              Recommended Jobs
-            </div>
+            <div className="recommend-jobs-title">Recommended Jobs</div>
             <div className="border border-gray-400 text-sm font-bold px-3 py-1 rounded-full flex flex-row items-center justify-center">
               38
             </div>
