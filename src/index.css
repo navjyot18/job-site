@@ -174,3 +174,17 @@ ul {
     border: none !important;
   }
 }
+.recommend-jobs-title {
+  @media all and (max-width: 768px) {
+    font-size: 14px !important;
+  }
+}
+.recommended-jobs-header {
+  @media all and (min-width: 321px) and (max-width: 768px) {
+  }
+  @media all and (max-width: 440px) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+}
